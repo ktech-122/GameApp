@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= gameInfo.name%>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= gameInfo.name%>
+    </h1>
+    <ul>
+        <li>
+            Price: $<%= gameInfo.price%>
+        </li>
+        <li>
+            Category: <%= gameInfo.category%>
+        </li>
+    </ul>
+    <a href="/games">All Games</a>
+    <a href="/games/<%=gameInfo._id%>/edit">Edit Game</a>
+    <form method="POST" action="/games/<%= gameInfo.id %>?_method=DELETE">
+        <button>Delete</button>
+    </form>
+
+</body>
+
+</html>

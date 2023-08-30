@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL Games</title>
+</head>
+
+<body>
+    <h1>ALL GAMES</h1>
+    <ul>
+        <% for (let game of games) { %>
+            <li>
+                <a href="/games/<%= game._id %>">
+                    <%= game.name %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+    <a href="/games/new/create">New Entry</a>
+    <a href="/games/search/s">Search </a>
+</body>
+
+</html>
